@@ -45,6 +45,7 @@ nav a {
 nav a.active,
 nav a:hover {
   color: #ff4d4d;
+  
 }
 
 .hero {
@@ -69,7 +70,6 @@ nav a:hover {
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   width: 100%;
   padding: 0 1rem;
 }
@@ -98,6 +98,7 @@ nav a:hover {
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;
+  margin-left: 8px;
 }
 
 .player-controls button {
@@ -111,7 +112,7 @@ nav a:hover {
 }
 
 .player-controls button:hover {
-  background: #e60000;
+  background: #ff4d4d;
 }
 
 .volume-control {
@@ -150,7 +151,6 @@ nav a:hover {
 }
 
 .event-card {
-  background: #fff;
   border-radius: 10px;
   padding: 1.5rem;
   flex: 1;
@@ -336,6 +336,7 @@ body {
 
 .album-card:hover {
   transform: scale(1.03);
+
 }
 
 .album-card img {
@@ -465,14 +466,118 @@ footer {
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
   }
 
   nav ul {
-    margin-top: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
   }
 
-  nav ul li {
-    margin-left: 1rem;
-    margin-right: 1rem;
+  .hero-text {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  .tour-dates,
+  .album-grid,
+  .photo-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .about-image,
+  .about-text {
+    padding: 0;
+  }
+
+  .event-cards {
+    flex-direction: column;
+  }
+
+  .album-grid {
+    gap: 20px;
+  }
+
+  .player-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .volume-control {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .gallery-section {
+    padding: 0 20px 40px;
+  }
+
+  .gallery-heading h2 {
+    font-size: 2rem;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .social-icons {
+    gap: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
   }
 }
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .hero-text {
+    font-size: 1.5rem;
+  }
+
+  .featured-music h2,
+  .upcoming-events h2,
+  .albums-header h1,
+  .tour-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .album-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .album-card img {
+    height: 180px;
+  }
+
+  .about-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .gallery-heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .footer-nav a {
+    font-size: 1rem;
+  }
+
+  .social-icons a {
+    font-size: 1.2rem;
+  }
+}
+
